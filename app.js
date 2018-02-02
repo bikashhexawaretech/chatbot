@@ -24,60 +24,7 @@ app.use(bodyParser.json());
       });
 
 
-     /* var facebookResponse={
-        "speech": "",
-        "displayText": " Your Ticket has been booked",
-        "data": {
-          "facebook": {
-
-            "attachment": {
-                  "type": "template",
-                  "payload": {
-                  "template_type": "generic",
-                  "elements": [
-                    {
-                      "title": "Booking Successful",
-                      "subtitle": 'Your Ticket has been booked',
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "Book Another Ticket",
-                          "payload": "book_ticket"
-                        },
-                        {
-                          "type": "postback",
-                          "title": "Contact Us",
-                          "payload": "contact_us"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              }
-            }
-          },
-        "source": "DuckDuckGo"
-      };
-
-return facebookResponse;*/
-
-}else if (req.body.result.action=='DebitCard'){
-
-  var resagent='Your Debit card request has been placed';
-  console.log('request are'+resagent);
-  return res.json({
-    speech:resagent,
-    displayText: resagent,
-    source:'Test Cards'
-  });
-
-}
-else{
-  return res.json({
-    speech:'HEY Sorry, cannot determine',
-    displayText:'HEY Sorry, we cant get you'
-  })
-}
+    }
 
 });
 
