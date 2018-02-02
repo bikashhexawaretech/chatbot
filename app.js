@@ -8,14 +8,11 @@ var portC = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-
-
-
    app.post('/',function(req,res){
       console.log('Received the request & it is:::'+JSON.stringify(req.body));
       if(req.body.result.action=='BookFlight'){
     
-      var resagent='Your Ticket has been booked ';
+      var resagent='Your Ticket is booked ';
      console.log('request are'+resagent);
       return res.json({
         speech:resagent,
